@@ -1,3 +1,50 @@
 button {
-  font-size: 60px;
+  border-radius: 8px;
+  min-width: 100px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  list-style: none;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  transition: all 100ms;
+}
+
+button:hover:enabled.primary {
+  background-color: #1e6edd;
+  border: solid #1e6edd;
+  transition: border 100ms;
+}
+
+button:hover:enabled.secondary {
+  background-color: #3384f3;
+  transition: background-color 100ms;
+  color: #ffffff;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.primary {
+  background-color: #3384f3;
+  color: #ffffff;
+  border: solid #3384f3;
+  transition: background-color 100ms;
+}
+
+.secondary {
+  background-color: #ffffff;
+  border: solid #3384f3;
+  color: #3384f3;
 }

@@ -1,0 +1,43 @@
+input {
+  width: 100%;
+  padding: 0.7em 1rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  color: #212529;
+  background-color: #fff;
+  margin-right: 5rem;
+}
+
+.form-input {
+  width: 75%;
+}
+
+label {
+  width: 25%;
+}
+
+input:focus {
+  box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
+  border: 1px solid #dee2e6;
+}
+
+.error {
+  border: 1px solid #ff0000;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.icon {
+  position: absolute;
+  top: 5%;
+  right: 1%;
+}
