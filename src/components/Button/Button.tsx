@@ -1,18 +1,13 @@
 import React from "react";
+import { BiLoaderCircle } from "react-icons/bi";
 import "./Button.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  solid,
-  regular,
-  brands,
-  icon,
-} from "@fortawesome/fontawesome-svg-core/import.macro";
 
 export interface ButtonProps {
   label: string;
   isPrimary: boolean;
-  disabled?: boolean;
-  loading?: boolean;
+  disabled: boolean;
+  loading: boolean;
+  onClick: any;
 }
 
 const Button = (props: ButtonProps) => {
@@ -21,14 +16,24 @@ const Button = (props: ButtonProps) => {
       <button
         className={props.isPrimary ? "primary" : "secondary"}
         disabled={props.disabled || props.loading}
+        onClick={props.onClick}
       >
         {props.loading && (
-          <FontAwesomeIcon icon={solid("spinner")} spin={props.loading} />
+          <div>
+            <BiLoaderCircle className="spin" />
+          </div>
         )}
         {!props.loading && props.label}
       </button>
     </>
   );
+};
+
+Button.defaultProps = {
+  label: "Tidak",
+  isPrimary: true,
+  disabled: false,
+  loading: false,
 };
 
 export default Button;

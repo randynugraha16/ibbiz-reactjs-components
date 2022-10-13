@@ -48,3 +48,21 @@ button:disabled {
   border: solid #3384f3;
   color: #3384f3;
 }
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.spin {
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
